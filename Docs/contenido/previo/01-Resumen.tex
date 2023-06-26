@@ -1,0 +1,14 @@
+El sexismo es un problema actual en la sociedad, con especial presencia en las redes sociales donde la fuerte presencia del machismo hace que se perpetúen los roles de género y se acose de forma sistemática a personas, especialmente mujeres, en base a su género. Concretamente se considera que el uso de inteligencia artificial puede ayudar a paliar este problema usando técnicas de Procesamiento del Lenguaje Natural.
+
+EXIST 2023 plantea una competición donde se invita a los participantes a luchar contra el sexismo en las redes sociales usando inteligencia artificial además de un dataset creado por los organizadores usando textos extraídos de twitter sobre situaciones sexistas. Esta competición, que se encuentra en su tercera entrega, ha cogido fuerza con los años especialmente a través del uso de sistemas basados en Transformers. De manera concreta, este documento plantea el desarrollo de 2 sistemas para resolver las dos primeras tareas planteadas por la competición: La detección de sexismo y la clasificación de intenciones dentro de los tweets sexistas en directos, reportes y juicios. 
+
+Una vez generados diversos modelos para enfrentarse a ambas tareas se realizará un análisis de los resultados para poder determinar qué modelo es el mejor para cada tarea además de analizar el estado actual de los modelos basados en Transformers en la detección del sexismo. Concretamente se plantea el uso de los siguientes Transformers: BERT (cased, uncased y multilingual), RoBERTa (base y twitter-base-emotion) y XLM-RoBERTa (base y large). 
+
+\begin{itemize}
+    \item Tarea 1: El mejor modelo para los tweets solo en inglés fue el generado con twitter\_roberta\_base\_emotion obteniendo un valor de F1 de 0.81 y por otro lado, para la tarea en su formato multilingüe el mejor modelo fue Bert multilingüe uncased con un resultado de F1 de 0.78.
+    \item Tarea 2: El mejor modelo para los tweets solo en inglés fue de nuevo el generado con twitter\_roberta\_base\_emotion obteniendo un valor de F1 de 0.5 donde para la tarea multilingüe el mejor modelo fue también Bert\_base\_multilingual-uncased con un F1 de 0.61.
+\end{itemize}
+
+Por último, una vez realizado el estudio, se realizará un breve análisis sobre la importancia de estos modelos en la sociedad, así como de las garantías desde un punto de vista legislativo que existen para regular el uso de IA en la sociedad.
+
+\textbf{Palabras Clave: Sexismo, Exist, Transformer, BERT, F1, procesamiento del lenguaje natural, twitter, redes de neuronas}

@@ -1,0 +1,26 @@
+Este capítulo tiene como objetivo realizar una revisión de todo el trabajo presentando las principales conclusiones, problemas encontrados durante la realización del mismo, así como aplicaciones a futuro para mejorar el estudio.
+
+Para este trabajo se han utilizado diferentes modelos generados con Transformers para la tarea de detección de sexismo en redes sociales, y la subtarea de clasificación multi clase de intención para cada mensaje sexista. El dataset para este estudio, así como la idea de las tareas se ha obtenido de la competición EXIST 2023 \cite{EXIST2023}.
+
+Para abordar estas tareas se han escogido una serie de modelos: BERT, con las variantes cased y uncased además de la variante multilingual, RoBERTa con las variantes base y twitter\_roberta\_base\_emotion y por último XLM-RoBERTa con las variantes base y large, aunque esta última no se ha podido usar por limitaciones del entorno de desarrollo ya mencionadas.
+
+Además de abordar la tarea considerando únicamente los tweets escritos en inglés, y por otro lado, toda la colección de tweets (que también incluía tweets escritos en español),  también se realizó un preprocesado de los tweets para poder realizar una comparativa de resultados de preprocesados y no preprocesados por lo que en total se obtuvieron cuatro datasets. En el preprocesado, se incluyeron tareas para la limpieza de los tweets (eliminar palabras de paradas, signos de puntuación, etc). 
+
+El objetivo del análisis era observar en primer lugar, los efectos del preprocesamiento y en segundo lugar la capacidad de los modelos transformadores de detectar el sexismo tanto en inglés (al ser el idioma principal usado en estos) como en una tarea donde se enfrentaran tanto al inglés como a un idioma adicional (en este caso el español). Es por eso que no se usaron modelos específicos para el español si no que se abordó la tarea desde una perspectiva multilingüe.
+
+Los resultados obtenidos fueron los siguientes:
+
+\begin{itemize}
+    \item Tarea 1: El mejor modelo para los tweets solo en inglés fue el generado con twitter\_roberta\_base\_emotion y por otro lado, para la tarea en su formato multilingüe el mejor modelo fue Bert multilingüe uncased.
+    \item Tarea 2: El mejor modelo para los tweets escritos en inglés fue de nuevo el generado con twitter\_roberta\_base\_emotion obteniendo un valor donde para la tarea multilingüe el mejor modelo fue también de nuevo Bert\_base\_multilingual-uncased.
+\end{itemize}
+
+El principal problema encontrado durante el trabajo ha sido el alcance de este, si bien se querían realizar pruebas usando más modelos transformadores y también un apartado específico para los tweets en español por limitaciones de tiempo se tuvo que determinar reducir el alcance del mismo. Es por eso que se plantea a futuro usar más modelos como ROBERTuito , distilBERT, Beto, BERTweet y la variante de RoBERTa twitter-roberta-base no especifica para análisis de sentimiento.
+
+De nuevo desde la perspectiva de la limitación temporal se decidió centrarse en el estudio de la clasificación de sexismo y detección de intenciones dejando a un lado la tercera tarea planteada por EXIST 2023 de subclasificación de sexismo en subtipos. Esta tarea es muy interesante y se plantea su estudio para futuras aproximaciones.
+
+En lo que respecta a los modelos y las tareas, otro de los retos fue el tratamiento de la información proporcionada por los seis anotadores que etiquetaron los tweets (es decir, cada tweets estaba anotado con seis etiquetas distintas para cada tarea), si bien se decidió simplificar esas entradas a una única anotación (seleccionando la anotación más frecuente entre los anotadores), en lugar de explotar las seis anotaciones para cada tweet. Sería interesante a futuro analizar distintas alternativas al problema y estudiar sus resultados. Por ejemplo, en lugar de seleccionar la anotación más frecuente, un posible enfoque sería ponderar las anotaciones de los anotadores según el sexo y edad de los anotadores (en el análisis de datos, se ha estudiado que podría existir un pequeño posible sesgo en la anotación dependiendo de la edad y género del anotador). 
+
+Finalmente, de cara a las limitaciones, desde una perspectiva de los recursos, una de las más significativas fue el uso de la plataforma Google Colab, con frecuencia tras realizar un número de pruebas, la plataforma suele bloquear el acceso a la GPU por un abuso del uso de esta. Esto se podría haber solucionado con acceso a la versión de pago de la plataforma (Google Colab Pro), y se plantea como una medida necesaria si se desea estudiar en profundidad las diferentes problemáticas ya planteadas.
+
+Desde una perspectiva personal este trabajo ha supuesto un reto mayor sin precedentes, no solo porque nunca  había realizado un análisis de un conjunto de datos de este tamaño y con esta estructura, sino también por el desconocimiento general de las herramientas en materia de PLN. Esto ha provocado sin duda retrasos en las distintas fases del proyecto, así como tomas de decisiones que en resumen han perjudicado a la calidad del estudio. Dicho eso, actualmente considero que he adquirido los conocimientos y experiencia necesarios para abordar el desarrollo de sistemas para aplicaciones de PLN basados en enfoques de aprendizaje profundo, y en particular, con transformadores. 

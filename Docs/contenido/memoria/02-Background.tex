@@ -1,0 +1,80 @@
+Este capítulo presenta una descripción de los principales conceptos relacionados con el trabajo y que se consideran necesarios para una correcta compresión del mismo.
+
+
+% ------------------------------------------------------------- %
+% --------------------- Inteligencia artificial -------------- -%
+% ------------------------------------------------------------- %
+
+\section{Inteligencia artificial}
+Se considera la inteligencia artificial (IA) \cite{schank1987ai} como la disciplina informática que se dedica a la creación de sistemas inteligentes con la capacidad de recrear la inteligencia humana, siendo capaces de aprender y adaptarse a diferentes tipos de situaciones \cite{wang2019defining}. Esta idea de inteligencia ocurre cuando una máquina se enfrenta a entornos que requieren análisis relacionados con el pensamiento humano cuyo objetivo es simular el propio pensamiento, análisis, aprendizaje, percepción etc. \cite{barbarossa2009inteligencia}.
+
+La inteligencia artificial usada correctamente puede traer diversas mejoras a nuestra sociedad, desde su posible apoyo en los diferentes sectores industriales \cite{albrieu2019inteligencia}, hasta su uso en el análisis de datos para favorecer el crecimiento de sectores fundamentales como podría ser el médico, entre otros\cite{rouhiainen2018inteligencia}.
+
+
+\section{Procesamiento del lenguaje natural}
+
+Podemos definir el lenguaje natural como el conjunto de signos y símbolos de carácter oral y escrito a través de los cuales los seres humanos se comunican de manera tradicional \cite{mendez1999lenguaje}.
+
+El Procesamiento del lenguaje natural (NLP por sus siglas en inglés), es el campo de la informática dentro de la Inteligencia Artificial centrado en la interacción entre humanos y computadoras. A través del desarrollo de algoritmos y modelos computacionales se consigue comprender, interpretar y generar el lenguaje humano para su posterior aplicación a un amplio rango de tareas \cite{nadkarni2011natural}.
+
+Algunas de las principales aplicaciones de PLN son\cite{hernandez2013aplicaciones}:   
+    \begin{enumerate}
+         \item Generación del Lenguaje Natural (CLN o NLU) usando entre otras el Reconocimiento y Síntesis del habla para crear mensajes en lenguaje humano de manera autónoma.
+        \item Recuperación y extracción de Información (RI o IR) para procesar textos y recuperar partes específicas en base a palabras clave.
+        \item Traducción Automática para traducir mensajes entre diferentes lenguas.
+        \item Resumen de textos.
+        \item Clasificación de Textos para diferentes aplicaciones.
+    \end{enumerate}
+
+\subsection{Preprocesado de datos}
+El Preprocesado de datos \cite{kotsiantis2006data} es una herramienta útil en diversas tareas de la computación especialmente en el procesamiento del lenguaje natural debido a la reducción del tamaño de los datos eliminando toda la información irrelevante o redundante aplicando técnicas como la tokenización, el uso de stop words entre otros de los cuales se hablará más adelante.
+
+
+\section{Clasificación de textos}
+La clasificación de texto (TC), es el proceso de clasificar textos en un conjunto de categorías predefinidas basándose en su contenido \cite{kowsari2019text}. Algunas tareas típicas de TC incluyen el análisis de sentimiento, la detección de mensajes de odio, detección de noticias falsas, y la categorización de noticias, entre otras \cite{minaee2021deep}. 
+
+Es interesante mencionar que, de forma específica, el objetivo de este trabajo como ya se ha mencionado es la clasificación de textos (tweets) en base a si son o no sexistas además de la segunda tarea ya mencionada anteriormente cuyo objetivo es determinar la intención del autor del texto.
+
+\section{Aprendizaje automático}
+El aprendizaje automático (ML por sus siglas en inglés) es un campo de estudio dentro de la Inteligencia Artificial (IA), que se enfoca en el desarrollo de algoritmos que pueden aprender de los datos y mejorar automáticamente con la experiencia. ML implica la construcción de modelos automáticos capaces de aprender automáticamente a partir de los ejemplos que se les proporcionan\cite{kersting2018machine}. 
+
+Los algoritmos de ML han sido aplicados en una amplia gama de problemas, como el reconocimiento de objetos \cite{ramik2014machine}, el reconocimiento de voz \cite{tandel2020voice}, y muchas de las tareas asociadas al PLN \cite{nagarhalli2021impact}.
+
+En general mientras que la IA se desarrolla teniendo como base el comportamiento inteligente, el ML se centra únicamente en desarrollar algoritmos y técnicas que permitan a las máquinas aprender y realizar predicciones o decisiones basadas en datos siendo por ende un subconjunto de la IA \cite{joshi2020machine}.
+
+\section{Redes neuronales}
+
+Se pueden definir las redes de neuronas artificiales\cite{gupta2013artificial}(ANN por sus siglas en inglés) como los sistemas informáticos creados con el objetivo de simular el funcionamiento del cerebro humano y como procesa la información usando el intrincado sistema de neuronas.
+
+Cada neurona recibe entrada de otras neuronas, procesa esa entrada y luego envía salida a otras neuronas. Al ajustar la fuerza de las conexiones entre las neuronas, las redes neuronales pueden 'aprender' a reconocer patrones y hacer predicciones basadas en los datos de entrada \cite{krogh2008artificial}.
+
+Dentro de las redes de neuronas se destacan las Redes de Neuronas Recurrentes \cite{medsker2001recurrent} (RNN's por sus siglas en inglés) debido al interés que poseen para nuestro trabajo. Esencialmente Las redes de neuronas recurrentes son una arquitectura basada en redes de neuronas con el objetivo de procesar datos de manera secuencial o usando estructuras temporales. 
+
+A diferencias de las ANN's poseen conexiones recurrentes por lo que pueden mantener su propia memoria interna y capturas patrones en las diferentes secuencias de entrada. Es por esto que se han usado con frecuencia en material de procesamiento del lenguaje natural al poder procesar el texto de manera secuencial \cite{tarwani2017survey}.
+
+\section{Aprendizaje profundo}
+El Deep Learning (DL) es una rama del aprendizaje automático que utiliza redes neuronales con tres o más capas para imitar el comportamiento del cerebro humano y aprender a partir de grandes cantidades de datos \cite{lecun2015deep}. 
+
+De cara a su capacidad de resolución de tareas, una red neuronal con una sola capa puede realizar predicciones limitadas por la simpleza tanto del problema como de la red y, por ende, para resolver problemas más complejos se requerirían redes más complejas. Esto por ejemplo se puede ver en la tarea del reconocimiento de formas tal que para reconocer formas más complejas se requieren más capas \cite{rusk2016deep}. 
+
+Si bien es cierto que el Deep Learning existía antes del 2006, no fue hasta entonces cuando se empezó a utilizar debido al escepticismo de los investigadores sobre su eficacia y aplicaciones. Desde entonces el Deep Learning ha conseguido afianzarse gracias principalmente a su capacidad para trabajar en entornos con muchos datos y con ruido\cite{wason2018deep}. 
+
+\subsection{Transformers}
+El Transformer \cite{vaswani2018tensor2tensor} es un popular modelo de Deep Learning ampliamente usado en diversos campos como podrían ser el Procesamiento del Lenguaje Natural o el procesamiento por Voz, entre otros. Originalmente se plantearon como un modelo para el modelaje secuencia a secuencia (seq2seq\cite{sutskever2014sequence}), sin embargo en recientes aproximaciones (como por ejemplo para este trabajo) se demostró su la gran versatilidad de los modelos preentrenados (PTM por sus siglas en inglés) basados en Transformers \cite{qiu2020pre}
+
+Los Transformers fueron introducidos inicialmente en 2017 por un equipo en Google Brain \cite{vaswani2017attention} y se encuentran actualmente sustituyendo a los modelos basados en RNN's como los long short-term memory \cite{hochreiter1997long} en tareas de NLP.
+
+Para que las redes neuronales del modelo puedan procesar los textos de entrada, es necesario transformar estos a una representación vectorial \cite{patil2023survey}, también conocidos como Embeddings. Estos modelos consiguen representar las palabras en vectores de tal manera que aquellas palabras similares entre sí se encuentren más cerca en el espacio vectorial generado. Algunos ejemplos de algoritmos de Embeddings son Word2Vec \cite{church2017word2vec} o GloVe \cite{pennington2014glove}.
+
+Esencialmente un Transformer usa mecanismos de atención \cite{niu2021review}, estos mecanismos permiten procesar la entrada y aprender para cada token qué otros tokens son más relevantes en su representación. Esto permite obtener una representación de las palabras más correcta que los modelos de Embeddings, ya que los modelos de atención son capaces de generar representaciones vectoriales para cada palabra de una entrada teniendo en cuenta su contexto, mientras que los modelos clásicos de Embeddings (por ejemplo, Word2vec), aunque tienen en cuenta el contexto, únicamente generan un vector por palabra, sin ser capaz de proporcionar vectores distintos a significados distintos de una palabra.
+
+La razón de la creciente popularidad de los Transformers respecto de las RNN's es esencialmente que las RNN's tienen memoria de corto plazo y un procesamiento en serie de la entrada a diferencia de la memoria basada en mecanismos de atención y su procesamiento en paralelo de la secuencia que poseen los Transformers \cite{vaswani2017attention}.
+
+
+\subsection{Transfer Learning}
+El Transfer Learning es una técnica de ML, especialmente aplicada en el uso de Transformer \cite{raffel2020exploring}, usada para mejorar el aprendizaje de una tarea dada usando el conocimiento ya aprendido por una tarea anterior. A diferencia del ML tradicional que aborda tareas de manera específica, el Transfer Learning está pensado para transferir el conocimiento de una o más tareas a una tarea objetivo \cite{torrey2010transfer}.
+
+Su proceso de transferencia implica tomar modelos preentrenados, los cuales ya han aprendido características de una tarea o conjunto de datos y adaptarlo a una tarea o conjunto de datos más pequeños, siendo especialmente útil en casos en los que la tarea objetivo tiene una cantidad de datos baja o muy limitada \cite{weiss2016survey}.
+
+Dentro del Transfer Learning, se debe hablar del Fine Tunning \cite{fu2022effectiveness}, cuyo objetivo es entrenar modelos preentrenados y ajustarlos para una tarea concreta como puede ser la clasificación de textos. Durante este proceso, además de entrenar las capas añadidas para la nueva tarea, también 
+algunas de las capas del modelo preentrenado son ajustadas para la nueva tarea \cite{quinn2019dive}.

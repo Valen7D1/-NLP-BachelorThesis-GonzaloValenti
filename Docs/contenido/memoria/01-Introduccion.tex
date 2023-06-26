@@ -1,0 +1,50 @@
+\label{introducción}
+Siquiera considerar que la sociedad en la que vivimos no es machista, supone un directo ataque a la inteligencia y una negación de lo evidente. Desde el principio de los tiempos, el hombre ha controlado todos los aspectos de la vida, desde la política, la economía, la ciencia y hasta la cultura \cite{puleo2005patriarcado}. Una de las principales consecuencias del machismo, es que cada día se siguen registrando casos de violencia de género y agresiones sexuales\cite{FU202214}. Afortunadamente, la sociedad actual siente un mayor rechazo por este tipo de comportamientos intolerables.
+
+Para este trabajo en particular se quiere centrar en abordar el problema social del sexismo. Se entiende por sexismo, la discriminación de personas por su sexo al considerarles inferiores \cite{lampert2018definicion}. Esencialmente compuesto por un conjunto de comportamientos que no hacen más que aumentar y consolidar la desigualdad de género hacia las mujeres. En definitiva, es un sistema que distribuye la realidad encerrándola en dos cajones que concretan qué es lo apropiadamente femenino y lo masculino cerrando a las personas a un solo camino \cite{lampert2018definicion}.
+
+Trabajar para mejorar la sociedad y eliminar las fuentes de discriminación y desigualdad, es tarea de todas las personas. El sexismo se encuentra presente en innumerables facetas de la vida, especialmente en las redes sociales donde ha encontrado un amplio campo de acción camuflado, entre otras formas, como humor\cite{rueda2014sexismo}. Además de directamente con mensajes , una de las formas con las que el sexismo coge fuerza en las redes sociales es por el uso de memes, imágenes y en general contenido audiovisual, el cual utilizado de manera constante puede llegar a influenciar la percepción y creencias de las personas que consumen dicho contenido \cite{pilay2021discurso}.
+
+En concreto, las redes sociales se han usado como instrumento para engrandecer discursos de odio como la culpabilización de la mujer al grito de 'A una señorita no le pasan esas cosas' como pasó el 11 de abril de 2017 en Perú \cite{janos2019senorita}. 
+
+Otro ejemplo donde se observan los efectos del sexismo en las redes sociales son por ejemplo las campañas de acoso a las mujeres periodistas, llegándose a registrar un 73\% de mujeres que reconocían haber sido víctimas de acoso online de las cuales hasta un 47\% declaraba recibir acoso por cuestiones de género \cite{posetti2020online}.
+
+Se podría pensar, erróneamente, que las mujeres en posiciones de poder estarían más protegidas a este tipo de ataques. Sin embargo, nada más lejos de la realidad, un 76.2\% de las parlamentarias europeas (menores de 40 años) reconocía haber sufrido acoso con connotaciones sexuales en 2018\cite{union2018sexism}. De hecho, en España de manera más reciente en el 2021, se registró que del total de los insultos y discursos de odio generados en la plataforma \href{https://twitter.com}{twitter}, el 90\% estaban dirigidos a mujeres \cite{pineiro2021say}.\newline 
+
+Si bien esto no son más que un par de ejemplos de miles, sirven perfectamente para mostrar el uso que se le pueden dar a las redes sociales para dar voz a discursos sexistas y sugestionar el pensamiento colectivo o la educación de los más jóvenes \cite{prieto2013importancia}.
+
+Es aquí de hecho, donde la Inteligencia Artificial puede tener algo que aportar a esta causa, con el uso de sistemas inteligentes basados en técnicas de Procesamiento de Lenguaje Natural (PLN). Concretamente en los últimos años se han realizado diversas aproximaciones con el objetivo de abordar este problema. Desde la aplicación de modelos Transformers \cite{schutz2021automatic} para la detección del sexismo, pasando por la creación de diferentes herramientas para facilitar las tareas de NLP como por ejemplo es el caso de la creación de un corpus para la detección del sexismo en las redes sociales francesas \cite{chiril2020annotated}, así como diferentes aproximaciones al problema usando diferentes técnicas de NLP para poder entenderlo al completo. Como por ejemplo se plantea en el estudio sobre los diferentes estados de ánimo detectados a la hora de escribir mensajes sexistas \cite{sharifirad2019your}.
+
+De manera más específica y directamente relacionado con este trabajo se destacan las diferentes competiciones relacionadas con el tema del sexismo en las redes sociales. Por ejemplo, existen la competición Semeval-2023 EDOS \cite{kirk2023semeval}, cuyo objetivo es el favorecer y apoyar el desarrollo de modelos para NLP en inglés que no solo sean precisos si no explicables. Y por otro lado EXIST, una competición similar a EDOS, pero tratando con tweets en español e inglés durante sus 3 ediciones en 2021 \cite{rodriguez2021overview}, 2022 \cite{rodriguez2022overview} y la más reciente en 2023 \cite{spina2023exist}.
+
+Durante este trabajo, cuyo principal objetivo es luchar contra el sexismo en las redes sociales usando métodos de PLN y aprendizaje profundo, se utilizará el dataset proporcionado por la tarea EXIST 2023 . Competición en la que se reta a los participantes a generar modelos capaces de detectar el sexismo en mensajes de redes sociales, escritos tanto en español como en inglés. 
+
+Esta competición propone tres tareas: la clasificación binaria de mensajes para distinguir aquellos con contenido sexista de los que no. Una segunda tarea, donde el objetivo es clasificar los mensajes sexistas en tres categorías distintas:  Direct (sexismo explícito en el tweet), Judgemental (tweet que juzga una situación sexista) y por último Reported (tweet que reporta una situación sexista), es decir, determinar la intención del autor del tweet y por último la tercera tarea que consiste en la categorización del sexismo en una o más de las siguientes clases: Ideología y desigualdad, estereotipos y dominancia, objetificación, violencia sexual y por último misoginia y violencia no sexual.
+
+Respecto a las ediciones anteriores, EXIST 2021 y EXIST 2022, cada texto del dataset fue anotado por varios anotadores, sin dar una clasificación final para cada tweet. Por tanto, será una tarea propia del trabajo decidir qué aproximación usar para resolver ese problema.
+        
+Cabe destacar que, si bien existe una tercera tarea dentro de EXIST 2023, de la cual se ha hablado ya brevemente, esa tarea de multi-etiquetado no se abordará durante este trabajo.
+
+% ---------------------------------------------------- %
+% ------------------- OBJETIVOS ---------------------- %
+% ---------------------------------------------------- %
+\section{Objetivos}
+
+El objetivo del Trabajo de Fin de Grado consiste en desarrollar un sistema para la detección automática de sexismo, aplicando técnicas basadas en PLN y aprendizaje profundo. Para generar este sistema se usarán las directrices establecidas por la competición EXIST 2023 \cite{EXIST2023} y el dataset proporcionado por los organizadores de la tarea. 
+
+% ---------------------------------------------------- %
+% -------------- ESTRUCTURA DOCUMENTO ---------------- %
+% ---------------------------------------------------- %
+\section{Estructura del documento}
+En esta sección se presenta la estructura que sigue el documento realizado:
+
+\begin{enumerate}
+    \item \textbf{Introducción:} este capítulo plantea la introducción al documento donde se describe la motivación y el problema a resolver, los objetivos del proyecto y la estructura del documento.
+    \item \textbf{Background:} capítulo donde se explica y plantean todos los conceptos básicos necesarios para la comprensión adecuada del trabajo. 
+    \item \textbf{Estado del arte:}  en este capítulo se muestran las últimas dos competiciones de EXIST, las cuales han abordado la detección de sexismo en redes sociales.
+    \item \textbf{Modelos:} descripción de las arquitecturas utilizadas durante el trabajo así como sus principales hiperparámetros usados, procesos seguidos para el procesamiento de los datos y entorno en el que se ha creado.
+    \item \textbf{Evaluación:} capítulo centrado a describir la evaluación de los modelos propuestos. En este capítulo, se describe de forma detallada el dataset, las métricas de evaluación y presentan los resultados para cada modelo y cada subtarea, determinando cuáles son los puntos fuertes y fallas de cada uno de los enfoques.
+    \item \textbf{Gestión del proyecto:} Apartado dedicado a la descripción de los requisitos, presupuesto, diagrama de GANT, así como la metodología de desarrollo y planificación del proyecto. 
+    \item \textbf{Impacto socioeconómico y marco legislativo:} Capítulo dedicado a tratar el impacto del proyecto planteado en la sociedad y por otro lado analizar el marco legal de la aplicación y uso de IA en la sociedad.
+    \item \textbf{Conclusiones y trabajos futuros:} En este capítulo, se presentan las principales conclusiones del trabajo, junto con las posibles líneas de trabajo futuro.
+\end{enumerate}
